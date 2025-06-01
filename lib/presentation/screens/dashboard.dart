@@ -4,11 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:inovola_task/core/app_theme.dart';
 import 'package:inovola_task/core/constants.dart';
 import 'package:inovola_task/data/models/expense/expense.dart';
-import 'package:inovola_task/presentation/controller/dashboard_bloc.dart';
+import 'package:inovola_task/presentation/state_management/dashboard_bloc.dart';
 import 'package:intl/intl.dart';
 
 import '../../data/models/category/categories.dart';
-import '../controller/general_bloc_state.dart';
+import '../state_management/general_bloc_state.dart';
 import '../widgets/expense_card.dart';
 import '../widgets/filter_popup.dart';
 import 'add_expense.dart';
@@ -258,7 +258,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
                             final expense = expenses[index];
                             Category? cat = categories.lastWhere(
-                              (category) => category.name == expense?.category,
+                              (category) => category.name == expense.category,
                             );
                             return expense.date?.isAfter(
                                         lastDateToShow ?? DateTime(2000)) ??
@@ -274,7 +274,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                         ? DateFormat('yyyy-MM-dd')
                                             .format(expense.date!)
                                         : "",
-                                    color: cat.iconColor ?? AppColors.iconColor,
+                                    color: cat.iconColor,
                                   )
                                 : Container();
                           },

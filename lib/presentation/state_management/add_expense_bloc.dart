@@ -3,7 +3,7 @@ import 'package:inovola_task/data/datasource/local_database/local_datasource.dar
 import 'package:inovola_task/data/models/expense/expense.dart';
 import 'package:inovola_task/data/repository/expense_repo.dart';
 import 'package:inovola_task/domain/usecase/add_new_expense_usecase.dart';
-import 'package:inovola_task/presentation/controller/general_bloc_state.dart';
+import 'package:inovola_task/presentation/state_management/general_bloc_state.dart';
 
 import '../../data/datasource/remote/api_services.dart';
 import '../../data/datasource/remote/base_api_service.dart';

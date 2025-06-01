@@ -1,15 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:inovola_task/data/datasource/local_database/local_datasource.dart';
-import 'package:inovola_task/data/datasource/remote/api_services.dart';
-import 'package:inovola_task/data/datasource/remote/base_api_service.dart';
-import 'package:inovola_task/data/models/Currency/CurrencyConverter.dart';
 import 'package:inovola_task/data/models/expense/expense.dart';
-import 'package:inovola_task/data/repository/currency_repo.dart';
 import 'package:inovola_task/data/repository/expense_repo.dart';
-import 'package:inovola_task/domain/repository/base_currency_repo.dart';
-import 'package:inovola_task/domain/usecase/add_new_expense_usecase.dart';
-import 'package:inovola_task/domain/usecase/get_currency.dart';
-import 'package:inovola_task/presentation/controller/general_bloc_state.dart';
+import 'package:inovola_task/presentation/state_management/general_bloc_state.dart';
 
 import '../../core/constants.dart';
 import '../../domain/repository/base_expanse_repo.dart';
@@ -60,6 +53,7 @@ class DashboardBloc
       yield GeneralBlocState(
           data: DashboardBlocState(expenses, event.pageNum ),
           waiting: false,
+          error: e.toString(),
           hasError: true);
     }
   }

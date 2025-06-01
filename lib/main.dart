@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:inovola_task/presentation/controller/add_expense_bloc.dart';
+import 'package:inovola_task/presentation/state_management/add_expense_bloc.dart';
 import 'package:inovola_task/presentation/screens/login.dart';
 
 import 'data/models/expense/expense.dart';
-import 'presentation/controller/dashboard_bloc.dart';
+import 'presentation/state_management/dashboard_bloc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

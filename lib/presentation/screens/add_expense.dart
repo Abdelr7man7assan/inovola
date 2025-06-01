@@ -7,8 +7,8 @@ import 'dart:io';
 import '../../core/app_theme.dart';
 import '../../core/constants.dart';
 import '../../data/models/category/categories.dart';
-import '../controller/add_expense_bloc.dart';
-import '../controller/general_bloc_state.dart';
+import '../state_management/add_expense_bloc.dart';
+import '../state_management/general_bloc_state.dart';
 import '../widgets/CommonDropBox.dart';
 import '../widgets/button.dart';
 import '../widgets/date_picker.dart';
@@ -96,8 +96,6 @@ class _AddExpensePageState extends State<AddExpensePage> {
                     keyBoardType: TextInputType.number,
                     isNumber: true,
                     decimal: true,
-                    // hint: "Enter amount",
-
                     title: "Amount",
                     validator: (val) {
                       if (val?.isEmpty ?? true) {
@@ -190,7 +188,6 @@ class _AddExpensePageState extends State<AddExpensePage> {
                       spacing: 16,
                       runSpacing: 16,
                       children: categories.map((category) {
-                        final isAdd = category.name == 'Add Category';
                         return Column(
                           children: [
                             CircleAvatar(
