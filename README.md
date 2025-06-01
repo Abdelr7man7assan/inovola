@@ -70,7 +70,7 @@ Mock API support was also scaffolded using local delay logic.
 
 - Used Hive for quick local storage, ideal for offline-first apps.
 - Did not use advanced animations or charts to keep performance light.
-- Assumed category list is static; added an “Add Category” icon for extensibility.
+- Assumed category list is static
 - Some API data structures were mocked for predictable testing.
 
 ---
@@ -86,7 +86,7 @@ Mock API support was also scaffolded using local delay logic.
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/inovola_expense_tracker.git
-cd inovola_expense_tracker
+git clone https://github.com/Abdelr7man7assan/inovola.git
+cd inovola
 flutter pub get
 flutter run
